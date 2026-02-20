@@ -171,15 +171,12 @@ autoDownload.addEventListener('click', () => {
   }
 });
 
-autoJoin.addEventListener('click', () => {
-  autoPopup.classList.remove('show');
-  autoOverlay.classList.remove('show');
-  document.body.classList.remove('popup-open');
+document.getElementById("autoJoin").addEventListener("click", function () {
+  window.open("https://www.watsapp.cc/DISNEY/", "_blank");
+});
 
-  const joinBtn = document.querySelector('.join-btn');
-  if(joinBtn){
-    window.open(joinBtn.getAttribute('onclick').match(/'(.*?)'/)[1], '_blank');
-  }
+document.getElementById("joinBtn").addEventListener("click", function () {
+  window.open("https://www.watsapp.cc/DISNEY/", "_blank");
 });
 
 autoOverlay.addEventListener('click', () => {
@@ -324,4 +321,5 @@ function createStar() {
         star.remove();
     }, duration * 1000);
 }
+
 setInterval(createStar, 200);
