@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Image/icon.ico">
+    <script id="chatway" async="true" src="https://cdn.chatway.app/widget.js?id=tygfk06U4kh8"></script>
+</head>
+
+<body>
+    <div id="star-container"></div>
+
+    <!-- POP CARD OTOMATIS -->
+    <div class="popup-auto" id="autoPopup">
+        <h2>Welcome DisneyOnline</h2>
+        <div class="popup-auto-buttons">
+            <button id="autoDownload">DOWNLOAD GAME</button>
+            <button id="autoJoin">JOIN</button>
+            <div>
+                <h3>New Member</h3>
+                <h3>Welcome bonus 30%</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-auto-overlay" id="autoOverlay"></div>
+
+    <!-- POP CARD RULES -->
+    <div class="popup-rules" id="rulesPopup">
+        <button class="close">✕</button>
+        <h3>RULES</h3>
+        <div class="rules-buttons">
+            <button id="btnTurnover">Syarat Turnover</button>
+            <button id="btnCashout">Syarat Cashout</button>
+        </div>
+        <div class="rules-content" id="rulesContent">
+            <p style="opacity:.6;text-align:center;">Please Select One Of The Conditions Above</p>
+        </div>
+    </div>
+
+    <!-- DOWNLOAD POPUP --> <!-- POP CARD GAME LIST -->
+    <div class="overlay" id="overlay"></div>
+    <div class="popup-overlay" id="popupOverlay"></div>
+    <div class="popup popup-games" id="gamePopup">
+        <h3 class="popup-title">DOWNLOAD GAME</h3>
+        <input type="text" class="search" id="gameSearch" placeholder="Search game...">
+        <div class="game-grid">
+
+            <a href="#" class="game-item">
+                <div class="game-title">WF GAMING</div>
+                <div class="game-thumb">
+                    <img src="Image/wfgaming.png" alt="">
+                </div>
+            </a>
+
+            <a href="#" class="game-item">
+                <div class="game-title">918KISS</div>
+                <div class="game-thumb">
+                    <img src="Image/918kiss.png" alt="">
+                </div>
+            </a>
+
+            <a href="#" class="game-item">
+                <div class="game-title">MEGA888</div>
+                <div class="game-thumb">
+                    <img src="Image/mega888.png" alt="">
+                </div>
+            </a>
+
+            <a href="#" class="game-item">
+                <div class="game-title">PUSSY888</div>
+                <div class="game-thumb">
+                    <img src="Image/pussy888.png" alt="">
+                </div>
+            </a>
+
+            <a href="#" class="game-item">
+                <div class="game-title">NEWTOWN</div>
+                <div class="game-thumb">
+                    <img src="Image/newtown.png" alt="">
+                </div>
+            </a>
+
+            <a href="#" class="game-item">
+                <div class="game-title">XE88</div>
+                <div class="game-thumb">
+                    <img src="Image/xe88.png" alt="">
+                </div>
+            </a>
+
+            <a href="#" class="game-item">
+                <div class="game-title">918KISS 2</div>
+                <div class="game-thumb">
+                    <img src="Image/918kiss2.png" alt="">
+                </div>
+            </a>
+
+            <a href="#" class="game-item">
+                <div class="game-title">JOKER</div>
+                <div class="game-thumb">
+                    <img src="Image/joker.png" alt="">
+                </div>
+            </a>
+
+            <a href="#" class="game-item">
+                <div class="game-title">KISS KAYA</div>
+                <div class="game-thumb">
+                    <img src="Image/kisskaya.png" alt="">
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- POP CARD DOWNLOAD -->
+    <div class="popup popup-download" id="downloadPopup">
+        <h3 id="downloadTitle">DOWNLOAD</h3>
+        <a id="btnAndroid" class="btn android" href="#" target="_blank">Android</a>
+        <a id="btnIOS" class="btn ios" href="#" target="_blank">iOS</a>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="nav-inner">
+            <img class="logo" src="Image/Logo.webp" alt="">
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="menu" id="navMenu">
+                <a href="#" id="downloadBtn">DOWNLOAD ▾</a>
+                <a href="#" id="rulesBtn">RULES</a>
+                <button class="join-btn" onclick="window.open('https:www.watsapp.cc/DISNEY/', '_blank') ">Join</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- FLOATING CONTACT NEW -->
+    <div class="floating-contact" id="floatingContact">
+        <div class="floating-box" id="floatingBox">
+            <a href="https://www.watsapp.cc/DISNEY/" target="_blank">
+                <img src="Image/whatsapp.png" alt="WhatsApp">
+                <span>WhatsApp</span>
+            </a>
+            <a href="https://t.me/Disney_Elyn" target="_blank">
+                <img src="Image/telegram.png" alt="Telegram">
+                <span>Telegram</span>
+            </a>
+        </div>
+        <div class="floating-tab" id="floatingTab">
+            <span>CONTACT</span>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="wrapper">
+        <div class="content">
+            <section class="slideshow">
+                <img src="Image/CO1.png" class="slide active">
+                <img src="Image/CO2.png" class="slide">
+                <img src="Image/CO3.png" class="slide">
+            </section>
+            <section class="bottom">
+                <div class="bottom-inner">
+                    <span class="accept">WE ACCEPT</span>
+                    <div class="pay-list">
+                        <span class="pay-item">MBB</span>
+                        <span class="pay-item">CIMB</span>
+                        <span class="pay-item">RHB</span>
+                        <span class="pay-item">BSN</span>
+                        <span class="pay-item">TNG</span>
+                        <span class="pay-item">E-WALLET</span>
+                    </div>
+                </div>
+            </section>
+
+            <div class="left-img">
+                <img src="Image/Fast.webp" alt="QR Code">
+                <img src="Image/Fast.webp" alt="QR Code">
+            </div>
+
+            <section class="table-right-section">
+                <div class="table-left">
+                    <button class="live-button">
+                        LIVE
+                        <span class="live-dot"></span>
+                    </button>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Cashout</th>
+                                <th>Name</th>
+                                <th>Game</th>
+                                <th>Name Game</th>
+                            </tr>
+                        </thead>
+                        <tbody id="sheetData"></tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+        <footer class="footer">
+            <p>© 2026 Disney Slot Casino</p>
+            <small>Play Responsibly • 18+</small>
+        </footer>
+    </main>
+
+    <!-- BOTTOM NAVBAR -->
+    <div class="popup-rebate" id="rebatePopup"></div>
+    <footer class="bottom-navbar">
+        <nav class="bottom-menu">
+            <a href="#" id="rebateBtn">CLAIM REBATE</a>
+        </nav>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
