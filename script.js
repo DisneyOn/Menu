@@ -46,6 +46,7 @@ const gamePopup = document.getElementById('gamePopup');
 const downloadPopup = document.getElementById('downloadPopup');
 const downloadBtn = document.getElementById('downloadBtn');
 const btnAndroid = document.getElementById('btnAndroid');
+const btnAndroidAPK = document.getElementById("btnAndroidAPK");
 const btnIOS = document.getElementById('btnIOS');
 const downloadTitle = document.getElementById('downloadTitle');
 const games = document.querySelectorAll('.game-item');
@@ -75,9 +76,29 @@ games.forEach(game => {
         if (gameLinks[gameName]) {
             btnAndroid.href = gameLinks[gameName].android;
             btnIOS.href = gameLinks[gameName].ios;
-        } else {
-            btnAndroid.href = "#";
-            btnIOS.href = "#";
+        }
+
+        if (gameName === "918KISS") {
+
+            btnAndroidAPK.style.display = "block";
+
+            btnAndroidAPK.href =
+                "https://github.com/DisneyOn/Menu/releases/download/918kiss-v1.0/918kiss.apk";
+
+        }
+        else if (gameName === "MEGA888") {
+
+            btnAndroidAPK.style.display = "block";
+
+            btnAndroidAPK.href =
+                "https://github.com/DisneyOn/Menu/releases/download/Mega888-v0.1/Mega888.apk";
+
+        }
+        else {
+
+            btnAndroidAPK.style.display = "none";
+            btnAndroidAPK.href = "#";
+
         }
 
         gamePopup.classList.remove('show');
@@ -151,51 +172,51 @@ const autoDownload = document.getElementById('autoDownload');
 const autoJoin = document.getElementById('autoJoin');
 
 window.addEventListener('load', () => {
-  setTimeout(() => {
-    autoPopup.classList.add('show');
-    autoOverlay.classList.add('show');
-    document.body.classList.add('popup-open');
-  }, 1000);
+    setTimeout(() => {
+        autoPopup.classList.add('show');
+        autoOverlay.classList.add('show');
+        document.body.classList.add('popup-open');
+    }, 1000);
 });
 
 autoDownload.addEventListener('click', () => {
-  autoPopup.classList.remove('show');
-  autoOverlay.classList.remove('show');
-  document.body.classList.remove('popup-open');
+    autoPopup.classList.remove('show');
+    autoOverlay.classList.remove('show');
+    document.body.classList.remove('popup-open');
 
-  const gamePopup = document.getElementById('gamePopup');
-  const overlayPop = document.getElementById('popupOverlay');
-  if(gamePopup && overlayPop){
-    gamePopup.classList.add('show');
-    overlayPop.classList.add('show');
-  }
+    const gamePopup = document.getElementById('gamePopup');
+    const overlayPop = document.getElementById('popupOverlay');
+    if (gamePopup && overlayPop) {
+        gamePopup.classList.add('show');
+        overlayPop.classList.add('show');
+    }
 });
 
 document.getElementById("autoJoin").addEventListener("click", function () {
-  window.open("https://www.watsapp.cc/DISNEY/", "_blank");
+    window.open("https://www.watsapp.cc/DISNEY/", "_blank");
 });
 
 document.getElementById("joinBtn").addEventListener("click", function () {
-  window.open("https://www.watsapp.cc/DISNEY/", "_blank");
+    window.open("https://www.watsapp.cc/DISNEY/", "_blank");
 });
 
 autoOverlay.addEventListener('click', () => {
-  autoPopup.classList.remove('show');
-  autoOverlay.classList.remove('show');
-  document.body.classList.remove('popup-open');
+    autoPopup.classList.remove('show');
+    autoOverlay.classList.remove('show');
+    document.body.classList.remove('popup-open');
 });
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  const rulesBtn = document.getElementById('rulesBtn');
-  const popup = document.getElementById('rulesPopup');
-  const closeBtn = popup.querySelector('.close');
-  const content = document.getElementById('rulesContent');
+    const rulesBtn = document.getElementById('rulesBtn');
+    const popup = document.getElementById('rulesPopup');
+    const closeBtn = popup.querySelector('.close');
+    const content = document.getElementById('rulesContent');
 
-  const btnTurnover = document.getElementById('btnTurnover');
-  const btnCashout = document.getElementById('btnCashout');
+    const btnTurnover = document.getElementById('btnTurnover');
+    const btnCashout = document.getElementById('btnCashout');
 
-  const turnoverText = `
+    const turnoverText = `
 Syarat Turnover
 ========================
 Slot Game
@@ -218,7 +239,7 @@ COMPANY tidak dapat bagi CUCI
 Hanya bagi balik CREDIT TOPUP
 `;
 
-  const cashoutText = `
+    const cashoutText = `
 Syarat Cashout
 =======================
 - Min Topup 20
@@ -240,42 +261,42 @@ Min Cashout 50
 Max Cashout 200
 `;
 
-  rulesBtn.addEventListener('click', e => {
-    e.preventDefault();
-    popup.classList.add('show');
-  });
+    rulesBtn.addEventListener('click', e => {
+        e.preventDefault();
+        popup.classList.add('show');
+    });
 
-  closeBtn.addEventListener('click', () => {
-    popup.classList.remove('show');
-  });
+    closeBtn.addEventListener('click', () => {
+        popup.classList.remove('show');
+    });
 
-  btnTurnover.addEventListener('click', () => {
-    content.textContent = turnoverText;
-  });
+    btnTurnover.addEventListener('click', () => {
+        content.textContent = turnoverText;
+    });
 
-  btnCashout.addEventListener('click', () => {
-    content.textContent = cashoutText;
-  });
+    btnCashout.addEventListener('click', () => {
+        content.textContent = cashoutText;
+    });
 
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  const rebateBtn = document.getElementById('rebateBtn');
-  const popup = document.getElementById('rebatePopup');
-  const WHATSAPP_LINK = "https://www.watsapp.cc/DISNEY/";
-  const rebateData = {
-    title: "Claim Rebate Rules",
-    rules: [
-      "Min IN 20",
-      "Mesti Cukup 3 Resit Untuk CLAIM Rebate Bonus 5%",
+    const rebateBtn = document.getElementById('rebateBtn');
+    const popup = document.getElementById('rebatePopup');
+    const WHATSAPP_LINK = "https://www.watsapp.cc/DISNEY/";
+    const rebateData = {
+        title: "Claim Rebate Rules",
+        rules: [
+            "Min IN 20",
+            "Mesti Cukup 3 Resit Untuk CLAIM Rebate Bonus 5%",
 
-      "Selepas Cashout / Cuci Rebate akan Reset",
-      "Selepas Claim Rebate Akan Reset"
-    ]
-  };
+            "Selepas Cashout / Cuci Rebate akan Reset",
+            "Selepas Claim Rebate Akan Reset"
+        ]
+    };
 
-  function openRebatePopup() {
-    popup.innerHTML = `
+    function openRebatePopup() {
+        popup.innerHTML = `
       <button class="close">✕</button>
       <h3>${rebateData.title}</h3>
 
@@ -287,19 +308,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
       <button class="btn-wa">CLAIM</button>
     `;
-    popup.classList.add('show');
-    popup.querySelector('.close').onclick = () => {
-      popup.classList.remove('show');
-    };
+        popup.classList.add('show');
+        popup.querySelector('.close').onclick = () => {
+            popup.classList.remove('show');
+        };
 
-    popup.querySelector('.btn-wa').onclick = () => {
-      window.open(WHATSAPP_LINK, "_blank");
-    };
-  }
-  rebateBtn.addEventListener('click', e => {
-    e.preventDefault();
-    openRebatePopup();
-  });
+        popup.querySelector('.btn-wa').onclick = () => {
+            window.open(WHATSAPP_LINK, "_blank");
+        };
+    }
+    rebateBtn.addEventListener('click', e => {
+        e.preventDefault();
+        openRebatePopup();
+    });
 
 });
 
