@@ -15,6 +15,17 @@ body {
     overflow-x: hidden;
 }
 
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background-image: url("Image/Any Image/Background.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 button,
 a {
     font: inherit;
@@ -1880,6 +1891,56 @@ main {
     font-size: clamp(15px, 2.3vw, 22px);
 }
 
+/* =========================================================
+   CUSTOM LIVE CHAT BUTTON
+========================================================= */
+
+.custom-live-chat {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 250px;
+    height: 250px;
+    z-index: 99999;
+    display: block;
+}
+
+.custom-live-chat-image {
+    width: 250px;
+    height: 250px;
+    display: block;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform .25s ease;
+}
+
+.custom-live-chat-image:hover {
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   HIDE CUSTOM LIVE CHAT
+========================================================= */
+
+.custom-live-chat.hidden {
+    display: none !important;
+}
+
+
+/* =========================================================
+   HIDE ORIGINAL CHATWAY TRIGGER
+========================================================= */
+
+.chatway--trigger-container {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+
+
+
 @media(max-width:900px) {
     .topbar-inner {
         grid-template-columns: 150px minmax(0, 1fr) auto auto
@@ -2598,6 +2659,11 @@ main {
     .download-heading p {
         font-size: 8px;
     }
+
+    .custom-live-chat, .custom-live-chat-image {
+        width: 140px;
+        height: 140px;
+    } 
 }
 
 @media(max-width:380px) {

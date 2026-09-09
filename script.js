@@ -59,7 +59,7 @@ restartPromotion();
 
 const hotList = document.getElementById('hotGameList');
 
-const HOT_ROTATE_MS = 5000;
+const HOT_ROTATE_MS = 60 * 60 * 1000;
 
 const hotProviders = [
     '918KISS',
@@ -834,3 +834,64 @@ if (promotionPopup) {
     });
 
 }
+
+const customLiveChat = document.getElementById('customLiveChat');
+const customLiveChatImage = document.getElementById('customLiveChatImage');
+let chatWasOpened = false;
+
+function showCustomLiveChat() {
+    if (!customLiveChat) return;
+
+    customLiveChat.classList.remove('hidden');
+}
+
+function hideCustomLiveChat() {
+    if (!customLiveChat) return;
+    customLiveChat.classList.add('hidden');
+}
+
+function openChatwayFromCustom() {
+    const chat = document.querySelector('.chatway--trigger-container');
+    if (!chat) {
+        console.warn('Chatway trigger belum ditemukan');
+        return false;
+    }
+    const button = chat.querySelector(
+        'button, [role="button"], a'
+    );
+    if (button) {
+        button.click();
+    } else {
+        chat.click();
+    }
+    chatWasOpened = true;
+    return true;
+}
+
+customLiveChatImage?.addEventListener('click', () => {
+
+    if (openChatwayFromCustom()) {
+        hideCustomLiveChat();
+    }
+
+});
+
+setInterval(() => {
+    if (!chatWasOpened) return;
+    const chatWindow =
+        document.querySelector(
+            '[class*="chatway"], [id*="chatway"]'
+        );
+    if (!chatWindow) return;
+    const style = window.getComputedStyle(chatWindow);
+    const isHidden =
+        style.display === 'none' ||
+        style.visibility === 'hidden' ||
+        style.opacity === '0';
+
+    if (isHidden) {
+        showCustomLiveChat();
+        chatWasOpened = false;
+    }
+
+}, 500);
