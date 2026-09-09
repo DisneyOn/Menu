@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ms">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Disney Online - Slot Game Malaysia</title>
+    <meta name="description" content="Disney Online">
+    <link rel="icon" type="image/x-icon" href="Image/Any Image/icon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+    <link rel="stylesheet" href="style.css">
+    <script id="chatway" async="true" src="https://cdn.chatway.app/widget.js?id=tygfk06U4kh8"></script>
+</head>
+
+<body>
+
+    <header class="topbar">
+        <img src="Image/Any Image/navbar.png" class="topbar-background" alt="">
+        <div class="topbar-inner">
+            <a class="brand" href="#home" aria-label="Disney Online Home">
+                <img src="Image/Any Image/Logo.webp" alt="Disney Online" class="brand-image">
+            </a>
+            <div class="top-title">
+                <span>Home</span>
+                <small>Official Website</small>
+            </div>
+            <button class="register-button" id="registerBtn" type="button">Register</button>
+            <button class="register-button" id="loginBtn" type="button">Login</button>
+        </div>
+    </header>
+
+    <nav class="main-nav" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-button"><i class="ph ph-house"></i><span>Home</span></a>
+            <a href="promotion.html" class="nav-button"><i class="ph ph-gift"></i><span>Promotion</span></a>
+            <a href="download.html" class="nav-button"><i class="ph ph-download"></i><span>Download</span></a>
+            <a href="rules.html" class="nav-button"><i class="ph ph-file-audio"></i><span>Rules</span></a>
+            <a href="#" class="nav-button" id="liveChatBtn"><i class="ph ph-chat-circle-dots"></i><span>Live
+                    Chat</span></a>
+        </div>
+    </nav>
+
+    <main id="home">
+        <div class="page-shell">
+
+            <section class="running-bar" aria-label="Announcement">
+                <div class="running-track">
+                    <span>WELCOME TO DISNEY ONLINE! • NEW MEMBER BONUS 30% • RECOMMEND BONUS 30% • UNLIMITED TOPUP BONUS
+                        5% • WF GAMING BONUS 10% • ENJOY MORE, WIN MORE!
+                    </span>
+                </div>
+                <div class="running-icon">
+                    <i class="ph ph-megaphone"></i>
+                </div>
+            </section>
+
+            <section class="promotion-section panel">
+                <div class="section-heading"><i class="ph ph-gift"></i>
+                    <h2>DISNEY PROMOTION</h2>
+                </div>
+                <div class="promotion-slider" id="promotionSlider">
+                    <img src="Image/Promotion/CO1.png" alt="Welcome Bonus 30%" class="promotion-slide active">
+                    <img src="Image/Promotion/CO2.png" alt="Recommend Bonus 30%" class="promotion-slide">
+                    <img src="Image/Promotion/CO3.png" alt="Time Bonus Topup 15%" class="promotion-slide">
+                    <button class="promo-arrow promo-prev" id="promoPrev" type="button"
+                        aria-label="Previous promotion">‹</button>
+                    <button class="promo-arrow promo-next" id="promoNext" type="button"
+                        aria-label="Next promotion">›</button>
+                    <div class="promo-dots">
+                        <button type="button" class="promo-dot active" data-slide="0" aria-label="Promotion 1"></button>
+                        <button type="button" class="promo-dot" data-slide="1" aria-label="Promotion 2"></button>
+                        <button type="button" class="promo-dot" data-slide="2" aria-label="Promotion 3"></button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="hot-payment-grid">
+                <section class="hot-preview panel">
+                    <div class="section-heading"><i class="ph ph-fire"></i>
+                        <h2>TODAY HOT GAME</h2>
+                    </div>
+                    <div class="hot-list" id="hotGameList"></div>
+                </section>
+
+
+                <section class="table-right-section panel">
+                    <div class="live-heading">
+                        <div><span class="section-label">LIVE WINNER</span><span class="section-text">Latest cashout
+                                activity</span></div>
+                        <span class="live-status"><i></i> LIVE</span>
+                    </div>
+                    <div class="live-table-wrap">
+                        <table class="live-table">
+                            <thead>
+                                <tr>
+                                    <th>Cashout</th>
+                                    <th>Name</th>
+                                    <th>Game</th>
+                                    <th>Name Game</th>
+                                </tr>
+                            </thead>
+                            <tbody id="sheetData"></tbody>
+                        </table>
+                    </div>
+                    <div class="live-mobile-list" id="liveMobileList"></div>
+                </section>
+            </section>
+
+
+            <div class="fast-banner">
+                <img src="Image/Any Image/Fast.webp" alt="Fast Promotion">
+                <img class="fast-banner-second" src="Image/Any Image/Fast.webp" alt="Fast Promotion">
+            </div>
+
+
+            <section class="payment-section panel">
+                <div class="section-heading"><i class="ph ph-wallet"></i>
+                    <h2>PAYMENT METHODS</h2>
+                </div>
+                <div class="payment-methods">
+                    <div class="payment-img">
+                        <img src="Image/Payment/Maybank.webp" alt="MayBank">
+                        <div class="text-payment">
+                            <h5>Maybank</h5>
+                            <div class="blink-active">
+                                <div>Active</div>
+                                <span class="status-dot"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="payment-img">
+                        <img src="Image/Payment/Cimb.webp" alt="Cimb">
+                        <div class="text-payment">
+                            <h5>Cimb</h5>
+                            <div class="blink-active">
+                                <div>Active</div>
+                                <span class="status-dot"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="payment-img">
+                        <img src="Image/Payment/AmBank.webp" alt="AmBank">
+                        <div class="text-payment">
+                            <h5>AmBank</h5>
+                            <div class="blink-active">
+                                <div>Active</div>
+                                <span class="status-dot"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="payment-img">
+                        <img src="Image/Payment/Rhb.webp" alt="Rhb">
+                        <div class="text-payment">
+                            <h5>RHB</h5>
+                            <div class="blink-active">
+                                <div>Active</div>
+                                <span class="status-dot"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="payment-img">
+                        <img src="Image/Payment/Bsn.webp" alt="Bsn">
+                        <div class="text-payment">
+                            <h5>Bsn</h5>
+                            <div class="blink-active">
+                                <div>Active</div>
+                                <span class="status-dot"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="payment-img">
+                        <img src="Image/Payment/Shopee Pay.webp" alt="Shoppe Pay">
+                        <div class="text-payment">
+                            <h5>Shopee Pay</h5>
+                            <div class="blink-active">
+                                <div>Active</div>
+                                <span class="status-dot"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="payment-img">
+                        <img src="Image/Payment/Grab Pay.webp" alt="Grab Pay">
+                        <div class="text-payment">
+                            <h5>Grab Pay</h5>
+                            <div class="blink-active">
+                                <div>Active</div>
+                                <span class="status-dot"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="payment-img">
+                        <img src="Image/Payment/Touch n'Go.webp" alt="Touch n'Go">
+                        <div class="text-payment">
+                            <h5>Touch n'Go</h5>
+                            <div class="blink-active">
+                                <div>Active</div>
+                                <span class="status-dot"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="payment-img">
+                        <img src="Image/Payment/Boots.webp" alt="Boots">
+                        <div class="text-payment">
+                            <h5>Boots</h5>
+                            <div class="blink-active">
+                                <div>Active</div>
+                                <span class="status-dot"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="payment-img">
+                        <img src="Image/Payment/Gx Bank.webp" alt="GxBank">
+                        <div class="text-payment">
+                            <h5>GxBank</h5>
+                            <div class="blink-active">
+                                <div>Active</div>
+                                <span class="status-dot"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="payment-img">
+                        <img src="Image/Payment/E-Wallet.webp" alt="E-Wallet">
+                        <div class="text-payment">
+                            <h5>E-Wallet</h5>
+                            <div class="blink-active">
+                                <div>Active</div>
+                                <span class="status-dot"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="payment-img">
+                        <img src="Image/Payment/Qr Code.webp" alt="QR Code">
+                        <div class="text-payment">
+                            <h5>QR Code</h5>
+                            <div class="blink-active">
+                                <div>Active</div>
+                                <span class="status-dot"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="popular-section panel" id="popularSection">
+                <div class="section-heading">
+                    <i class="ph ph-star"></i>
+                    <h2>POPULAR GAME</h2>
+                </div>
+
+                <div class="popular-wrap">
+                    <div class="popular-track" id="popularTrack">
+
+                        <!-- SET 1 -->
+                        <article class="popular-card">
+                            <img src="Image/PopularGame/918KISS.jpg" alt="918KISS">
+                            <strong>918KISS</strong>
+                        </article>
+
+                        <article class="popular-card">
+                            <img src="Image/PopularGame/MEGA888.jpg" alt="MEGA888">
+                            <strong>MEGA888</strong>
+                        </article>
+
+                        <article class="popular-card">
+                            <img src="Image/PopularGame/PUSSY888.jpg" alt="PUSSY888">
+                            <strong>PUSSY888</strong>
+                        </article>
+
+                        <article class="popular-card">
+                            <img src="Image/PopularGame/NEWTOWN.jpg" alt="NEWTOWN">
+                            <strong>NEWTOWN</strong>
+                        </article>
+
+                        <article class="popular-card">
+                            <img src="Image/PopularGame/JOKER.jpg" alt="JOKER">
+                            <strong>JOKER</strong>
+                        </article>
+
+                        <article class="popular-card">
+                            <img src="Image/PopularGame/WF-GAMING.jpg" alt="WF GAMING">
+                            <strong>WF GAMING</strong>
+                        </article>
+
+                        <article class="popular-card">
+                            <img src="Image/PopularGame/918KAYA.jpg" alt="918KAYA">
+                            <strong>918KAYA</strong>
+                        </article>
+
+                        <article class="popular-card">
+                            <img src="Image/PopularGame/XE88.jpg" alt="XE88">
+                            <strong>XE88</strong>
+                        </article>
+
+
+                        <!-- SET 2 - DUPLIKAT UNTUK LOOP -->
+                        <article class="popular-card">
+                            <img src="Image/PopularGame/918KISS.jpg" alt="918KISS">
+                            <strong>918KISS</strong>
+                        </article>
+
+                        <article class="popular-card">
+                            <img src="Image/PopularGame/MEGA888.jpg" alt="MEGA888">
+                            <strong>MEGA888</strong>
+                        </article>
+
+                        <article class="popular-card">
+                            <img src="Image/PopularGame/PUSSY888.jpg" alt="PUSSY888">
+                            <strong>PUSSY888</strong>
+                        </article>
+
+                        <article class="popular-card">
+                            <img src="Image/PopularGame/NEWTOWN.jpg" alt="NEWTOWN">
+                            <strong>NEWTOWN</strong>
+                        </article>
+
+                        <article class="popular-card">
+                            <img src="Image/PopularGame/JOKER.jpg" alt="JOKER">
+                            <strong>JOKER</strong>
+                        </article>
+
+                        <article class="popular-card">
+                            <img src="Image/PopularGame/WF-GAMING.jpg" alt="WF GAMING">
+                            <strong>WF GAMING</strong>
+                        </article>
+
+                        <article class="popular-card">
+                            <img src="Image/PopularGame/918KAYA.jpg" alt="918KAYA">
+                            <strong>918KAYA</strong>
+                        </article>
+
+                        <article class="popular-card">
+                            <img src="Image/PopularGame/XE88.jpg" alt="XE88">
+                            <strong>XE88</strong>
+                        </article>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <img src="Image/Any Image/Logo.webp" alt="Disney Online">
+
+                <p>
+                    Disney Online — Your entertainment destination.
+                    Nikmati pengalaman bermain dengan mudah dan nyaman.
+                </p>
+            </div>
+
+            <!-- Quick Menu -->
+            <div class="footer-column">
+                <h3>QUICK MENU</h3>
+
+                <a href="index.html">
+                    <i class="ph ph-house"></i>
+                    Home
+                </a>
+
+                <a href="promotion.html">
+                    <i class="ph ph-gift"></i>
+                    Promotion
+                </a>
+
+                <a href="download.html">
+                    <i class="ph ph-download"></i>
+                    Download
+                </a>
+
+                <a href="rules.html">
+                    <i class="ph ph-file-text"></i>
+                    Rules
+                </a>
+            </div>
+
+            <div class="footer-column">
+                <h3>SUPPORT</h3>
+
+                <a href="#">
+                    <i class="ph ph-chat-circle-dots"></i>
+                    Live Chat
+                </a>
+
+                <a href="#">
+                    <i class="ph ph-question"></i>
+                    FAQ
+                </a>
+
+                <a href="#">
+                    <i class="ph ph-envelope"></i>
+                    Contact Us
+                </a>
+            </div>
+
+            <!-- Information -->
+            <div class="footer-column footer-info">
+                <h3>INFORMATION</h3>
+                <p>
+                    <i class="ph ph-shield-check"></i>
+                    Secure & Reliable
+                </p>
+
+                <p>
+                    <i class="ph ph-clock"></i>
+                    Customer Support
+                </p>
+
+                <p>
+                    <i class="ph ph-device-mobile"></i>
+                    Mobile Friendly
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>
+                © 2026 Disney Online. All Rights Reserved.
+            </span>
+            <div class="footer-bottom-links">
+                <a href="rules.html">Rules</a>
+                <span>•</span>
+                <a href="#">Privacy Policy</a>
+                <span>•</span>
+                <a href="#">Terms & Conditions</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-contact">
+        <div class="contact-panel">
+            <div class="contact-header">
+                <div>
+                    <strong>CONTACT US</strong>
+                    <small>We are here to help</small>
+                </div>
+
+                <button class="contact-close" type="button">
+                    <i class="ph ph-x"></i>
+                </button>
+            </div>
+
+            <div class="contact-list">
+                <a href="https://www.watsapp.cc/DISNEY/" class="contact-item" target="_blank" rel="noopener noreferrer">
+                    <i class="ph ph-whatsapp-logo"></i>
+                    <span>WhatsApp</span>
+                    <i class="ph ph-arrow-up-right"></i>
+                </a>
+
+                <a href="https://t.me/Disney_Elyn" class="contact-item" target="_blank" rel="noopener noreferrer">
+                    <i class="ph ph-telegram-logo"></i>
+                    <span>Telegram</span>
+                    <i class="ph ph-arrow-up-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <button class="contact-toggle" type="button">
+            <span>CONTACT US</span>
+        </button>
+    </div>
+
+
+    <!-- CUSTOM CHATWAY PROMO -->
+    <div class="custom-live-chat" id="customLiveChat">
+        <img src="Image/Any Image/Logo Chat me.png" alt="Live Chat" class="custom-live-chat-image"
+            id="customLiveChatImage">
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
